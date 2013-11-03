@@ -107,7 +107,7 @@ class ParticleSwarm:
             
             # if verbose more than 1, display the initial function
             if verbose >= 1:
-                self.dispFunc(self.functions[i], particles, x, y, z, 'Fonction : ' + self.functions[i].getName() + ', initialisation')
+                self.dispFunc(self.functions[i], particles, x, y, z, 'Initialization : ' + self.functions[i].getName())
 
             # main loop, iterate until the algorithm has converged
             while it <= self.max_it:
@@ -116,7 +116,7 @@ class ParticleSwarm:
                 
                 # if strong verbose, display function every step iteration
                 if verbose == 2 and it % step == 0:
-                    self.dispFunc(self.functions[i], particles, x, y, z, 'Fonction : ' + self.functions[i].getName() + ', iteration ' + str(it))
+                    self.dispFunc(self.functions[i], particles, x, y, z, 'Iteration ' + str(it) + ' : ' + self.functions[i].getName())
                 
                 # iterate over every particle
                 for part in range(len(particles)):                    
@@ -148,4 +148,4 @@ class ParticleSwarm:
                 
             # if verbose more than 1, display function after convergence
             if verbose >= 1:
-                self.dispFunc(self.functions[i], particles, x, y, z, 'Fonction : ' + self.functions[i].getName() + ', terminaison')
+                self.dispFunc(self.functions[i], particles, x, y, z, 'Convergence : ' + self.functions[i].getName())
