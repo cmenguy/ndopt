@@ -194,3 +194,18 @@ class Easom:
         
     def getName(self):
         return 'Easom'
+
+# Six-Hump Camel Back function
+class CamelBack:
+    def __init__(self, dim=2, max_particules=25, max_it=1000, min=-3, max=3):
+        self.max_particules = max_particules;
+        self.max_it = max_it;
+        self.dim = dim;
+        self.min = min;
+        self.max = max;
+        
+    def getValue(self, pos):
+        return (4.-2.1*pos[0]*pos[0]+pos[0]**(4./3.))*pos[0]*pos[0] + pos[0]*pos[1] + (-4.+4.*pos[1]*pos[1])*pos[1]*pos[1];
+        
+    def getName(self):
+        return 'CamelBack'
