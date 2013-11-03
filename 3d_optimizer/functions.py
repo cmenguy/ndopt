@@ -140,3 +140,21 @@ class RastRigin:
     
     def getName(self):
         return 'RastRigin'
+
+# Schwefel function
+class Schwefel:
+    def __init__(self, dim=2, max_particules=25, max_it=1000, min=-500, max=500):
+        self.max_particules = max_particules;
+        self.max_it = max_it;
+        self.dim = dim;
+        self.min = min;
+        self.max = max;
+        
+    def getValue(self, pos):
+        res = 0;
+        for i in range(len(pos)):
+            res += -pos[i]*sin(sqrt(abs(pos[i])));
+        return res;
+    
+    def getName(self):
+        return 'Schwefel'
