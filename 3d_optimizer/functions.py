@@ -83,3 +83,21 @@ class DeJong2:
     
     def getName(self):
         return 'DeJong2'
+
+# De Jong 3 function
+class DeJong3:
+    def __init__(self, dim=2, max_particules=25, max_it=1000, min=-5.12, max=5):
+        self.max_particules = max_particules;
+        self.max_it = max_it;
+        self.dim = dim;
+        self.min = min;
+        self.max = max;
+    
+    def getValue(self, pos):
+        res = 0;
+        for i in range(len(pos)):
+            res += floor(pos[i]);
+        return res;
+    
+    def getName(self):
+        return 'DeJong3'
