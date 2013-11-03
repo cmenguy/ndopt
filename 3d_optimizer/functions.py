@@ -101,3 +101,24 @@ class DeJong3:
     
     def getName(self):
         return 'DeJong3'
+
+# Hyper Ellipsoid function
+class Ellipsoid:
+    def __init__(self, dim=2, max_particules=25, max_it=1000, min=-65.536, max=65.536):
+        self.max_particules = max_particules;
+        self.max_it = max_it;
+        self.dim = dim;
+        self.min = min;
+        self.max = max;
+        
+    def getValue(self, pos):
+        res = 0;
+        for i in range(len(pos)):
+            subres = 0;
+            for j in range(i):
+                subres += pos[j];
+            res += subres*subres;
+        return res;
+    
+    def getName(self):
+        return 'HyperEllipsoid'
