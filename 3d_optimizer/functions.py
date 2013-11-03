@@ -158,3 +158,24 @@ class Schwefel:
     
     def getName(self):
         return 'Schwefel'
+
+# Zakharov function
+class Zakharov:
+    def __init__(self, dim=2, max_particules=25, max_it=1000, min=-5, max=10):
+        self.max_particules = max_particules;
+        self.max_it = max_it;
+        self.dim = dim;
+        self.min = min;
+        self.max = max;
+        
+    def getValue(self, pos):
+        res = 0;
+        first = 0;
+        second = 0;
+        for i in range(len(pos)):
+            first += pos[i]*pos[i];
+            second += 0.5*(i+1)*pos[i];
+        return first + second**2 + second**4;
+        
+    def getName(self):
+        return 'Zakharov'
