@@ -209,3 +209,28 @@ class CamelBack:
         
     def getName(self):
         return 'CamelBack'
+
+# Ackley's path function
+class AckleyPath:
+    def __init__(self, dim=2, max_particules=25, max_it=1000, min=-32.768, max=32.768):
+        self.max_particules = max_particules;
+        self.max_it = max_it;
+        self.dim = dim;
+        self.min = -2;
+        self.max = 2;
+        
+    def getValue(self, pos):
+        a = 20.;
+        b = 0.2;
+        c = 2.*pi;
+        
+        c1 = 0;
+        c2 = 0;
+        for i in range(len(pos)):
+            c1 += pos[i]*pos[i];
+            c2 += cos(c*pos[i]);
+            
+        return -a*exp(-b*sqrt(c1 / len(pos))) - exp(c2 / len(pos)) + a + exp(1)
+        
+    def getName(self):
+        return 'Ackley'
