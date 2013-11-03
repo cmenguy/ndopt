@@ -179,3 +179,18 @@ class Zakharov:
         
     def getName(self):
         return 'Zakharov'
+
+# Easom function
+class Easom:
+    def __init__(self, dim=2, max_particules=25, max_it=1000, min=pi-2, max=pi+2):
+        self.max_particules = max_particules;
+        self.max_it = max_it;
+        self.dim = dim;
+        self.min = min;
+        self.max = max;
+        
+    def getValue(self, pos):
+        return -cos(pos[0])*cos(pos[1])*exp(-((pos[0]-pi)**2 + (pos[1]-pi)**2));
+        
+    def getName(self):
+        return 'Easom'
