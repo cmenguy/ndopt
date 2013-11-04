@@ -1,0 +1,47 @@
+#!/usr/bin/python
+
+from continuous_optimizer.optimizer import ParticleSwarm
+import continuous_optimizer.functions as fcts
+
+from optparse import OptionParser
+
+import sys
+import inspect
+
+parser = OptionParser()
+parser.add_option("-d", "--dim", dest="dim",
+    help="dimension of the function to optimize", metavar="DIM",
+    default="2")
+parser.add_option("-f", "--function", dest="function",
+    help="name of the function to optimize", metavar="FUNCTION",
+    default="michalewicz")
+parser.add_option("-n", "--num-particles", dest="particles",
+    help="number of particles in the swarm", metavar="PARTICLES",
+    default="25")
+parser.add_option("-i", "--iterations", dest="iterations",
+    help="max number of iterations", metavar="ITERATIONS",
+    default="1000")
+parser.add_option("-v", "--verbose", dest="verbose",
+    help="verbose level", metavar="VERBOSE",
+    default="1")
+parser.add_option("-p", "--phi", dest="phi",
+    help="initial speed variation coefficient", metavar="PHI",
+    default="4.1")
+parser.add_option("-k", dest="k",
+    help="mobility of the particles", metavar="K",
+    default="1")
+(options, args) = parser.parse_args()
+
+dimension = int(options.dim)
+
+symbols = {}
+for name, obj in inspect.getmembers(fcts):
+    if inspect.isclass(obj):
+        symbols[name.lower()] = name
+if options.function.lower() in symbols.keys():
+    clazz = getattr(fcts, symbols[options.function.lower()])
+    instance = clazz()
+    print instance.getName()
+else:
+    print >> sys.stderr, "unknown function %s" % options.function
+    sys.exit(1)
