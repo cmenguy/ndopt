@@ -35,6 +35,9 @@ parser.add_option("-k", dest="k",
 dimension = int(options.dim)
 num_particles = int(options.particles)
 max_iterations = int(options.iterations)
+verbose = int(options.verbose)
+phi = float(options.phi)
+k = float(options.k)
 
 functions = []
 symbols = {}
@@ -48,5 +51,5 @@ else:
     print >> sys.stderr, "unknown function %s" % options.function
     sys.exit(1)
 
-swarm = ParticleSwarm(functions)
-swarm.run()
+swarm = ParticleSwarm(functions, phi, k)
+swarm.run(verbose)
