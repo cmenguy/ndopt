@@ -14,9 +14,6 @@ class RosenBrock:
         for i in range(len(pos)-1):
             res += (1.-pos[i])**2 + 100.*(pos[i+1]-pos[i]**2)**2;
         return res;
-    
-    def getName(self):
-        return 'RosenBrock'
 
 # Goldstein and Price function
 class GoldStein:
@@ -29,9 +26,6 @@ class GoldStein:
     
     def getValue(self, pos):
         return (1 + (1 + pos[0] + pos[1])**2 * (19 - 14*pos[0] + 3*pos[0]*pos[0] - 14*pos[1] + 6*pos[0]*pos[1] + 3*pos[1]*pos[1]))*(30 + (2*pos[0] - 3*pos[1])**2 * (18 - 32*pos[0] + 12*pos[0]*pos[0] + 48*pos[1] - 36*pos[0]*pos[1] + 27*pos[1]*pos[1]))
-    
-    def getName(self):
-        return 'GoldStein'
 
 # Michalewicz function
 class Michalewicz:
@@ -47,9 +41,6 @@ class Michalewicz:
         for i in range(len(pos)):
             res += -sin(pos[i])*(sin((i+1)*pos[i]*pos[i]/pi))**20
         return res;
-    
-    def getName(self):
-        return 'Michalewicz'
 
 # De Jong 1 function
 class DeJong1:
@@ -65,9 +56,6 @@ class DeJong1:
         for i in range(len(pos)):
             res += pos[i]*pos[i];
         return res;
-    
-    def getName(self):
-        return 'DeJong1'
 
 # De Jong 2 function
 class DeJong2:
@@ -80,9 +68,6 @@ class DeJong2:
     
     def getValue(self, pos):
         return (1.-pos[0])**2 + 100.*(pos[1]-pos[0]**2)**2;
-    
-    def getName(self):
-        return 'DeJong2'
 
 # De Jong 3 function
 class DeJong3:
@@ -98,9 +83,6 @@ class DeJong3:
         for i in range(len(pos)):
             res += floor(pos[i]);
         return res;
-    
-    def getName(self):
-        return 'DeJong3'
 
 # Hyper Ellipsoid function
 class Ellipsoid:
@@ -119,9 +101,6 @@ class Ellipsoid:
                 subres += pos[j];
             res += subres*subres;
         return res;
-    
-    def getName(self):
-        return 'HyperEllipsoid'
 
 # RastRigin function
 class RastRigin:
@@ -137,9 +116,6 @@ class RastRigin:
         for i in range(len(pos)):
             res += pos[i]*pos[i] - 10.*cos(2.*pi*pos[i]);
         return 10*len(pos) + res;
-    
-    def getName(self):
-        return 'RastRigin'
 
 # Schwefel function
 class Schwefel:
@@ -155,9 +131,6 @@ class Schwefel:
         for i in range(len(pos)):
             res += -pos[i]*sin(sqrt(abs(pos[i])));
         return res;
-    
-    def getName(self):
-        return 'Schwefel'
 
 # Zakharov function
 class Zakharov:
@@ -176,9 +149,6 @@ class Zakharov:
             first += pos[i]*pos[i];
             second += 0.5*(i+1)*pos[i];
         return first + second**2 + second**4;
-        
-    def getName(self):
-        return 'Zakharov'
 
 # Easom function
 class Easom:
@@ -191,9 +161,6 @@ class Easom:
         
     def getValue(self, pos):
         return -cos(pos[0])*cos(pos[1])*exp(-((pos[0]-pi)**2 + (pos[1]-pi)**2));
-        
-    def getName(self):
-        return 'Easom'
 
 # Six-Hump Camel Back function
 class CamelBack:
@@ -206,9 +173,6 @@ class CamelBack:
         
     def getValue(self, pos):
         return (4.-2.1*pos[0]*pos[0]+pos[0]**(4./3.))*pos[0]*pos[0] + pos[0]*pos[1] + (-4.+4.*pos[1]*pos[1])*pos[1]*pos[1];
-        
-    def getName(self):
-        return 'CamelBack'
 
 # Ackley's path function
 class AckleyPath:
@@ -231,6 +195,3 @@ class AckleyPath:
             c2 += cos(c*pos[i]);
             
         return -a*exp(-b*sqrt(c1 / len(pos))) - exp(c2 / len(pos)) + a + exp(1)
-        
-    def getName(self):
-        return 'Ackley'
