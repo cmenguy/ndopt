@@ -33,15 +33,20 @@ parser.add_option("-k", dest="k",
 (options, args) = parser.parse_args()
 
 dimension = int(options.dim)
+num_particles = int(options.particles)
+max_iterations = int(options.iterations)
 
+functions = []
 symbols = {}
 for name, obj in inspect.getmembers(fcts):
     if inspect.isclass(obj):
         symbols[name.lower()] = name
 if options.function.lower() in symbols.keys():
     clazz = getattr(fcts, symbols[options.function.lower()])
-    instance = clazz()
-    print instance.getName()
+    functions.append(clazz(dimension, num_particles, max_iterations))
 else:
     print >> sys.stderr, "unknown function %s" % options.function
     sys.exit(1)
+
+swarm = ParticleSwarm(functions)
+swarm.run()
