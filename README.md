@@ -114,3 +114,23 @@ The De Jong 2 function is just another name for the [Rosenbrock](#rosenbrock) fu
 ### Ackley Path
 
 ![minima](/data/ackley.png)
+
+## Analysis
+
+There are 3 important parameters to analyze to see how the particle swarm performs
+
+  - number of particles : how does performance behave as we increase the number of particles?
+  - initial speed variation coefficient : this parameter is tied to the inner workings of the particles behavior, and changing this will greatly affect how the algorithm behave.
+  - mobility of the particles : if particles are more mobile, we will see different properties of the algorithm.
+
+### Influence of the number of particles
+
+The following diagram takes the [Michalewicz](#michalewicz) function as an example and shows 1 curve for different number of particles used in the algorithm. Here is some observations we can make:
+
+  - with 10 particles, parts of the solution space won't be examined, and so we are bound to converge towards a local minima where the particles will be trapped.
+  - with 25 particles, the solution space is examined more widely, but we are still not converging towards the global minima.
+  - with 50 particles, it takes more time to converge, but the value towards which we converge is closer to the global minima.
+
+![analysis](/data/particles.png)
+
+These observations make sense with the intuition, so it's important to use a reasonably high number of particles if we want to get closer to the global minima.
