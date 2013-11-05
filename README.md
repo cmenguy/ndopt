@@ -12,12 +12,12 @@ continuous-optimizer applies the particle swarm algorithm to find the global min
     - [De Jong 1](#de-jong-1)
     - [De Jong 2](#de-jong-2)
     - [De Jong 3](#de-jong-3)
-    - [Hyper Ellipsoid](#hyper-ellipsoid)
     - [Rastrigin](#rastrigin)
     - [Schwefel](#schwefel)
     - [Zakharov](#zakharov)
     - [Easom](#easom)
     - [Six Hump Camel Back](#six-hump-camel-back)
+    - [Ackley Path](#ackley-path)
   - [Analysis](#analysis)
     - [Influence of the number of particles](#influence-of-the-number-of-particles)
     - [Influence of the initial speed variation coefficient](#influence-of-the-initial-speed-variation-coefficient)
@@ -95,3 +95,7 @@ The De Jong 2 function is just another name for the [Rosenbrock](#rosenbrock) fu
 ### De Jong 3
 
 ![minima](/data/dejong3.png)
+
+### Rastrigin
+
+![minima](/data/rastrigin.png)
