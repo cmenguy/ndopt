@@ -99,3 +99,7 @@ The De Jong 2 function is just another name for the [Rosenbrock](#rosenbrock) fu
 ### Rastrigin
 
 ![minima](/data/rastrigin.png)
+
+### Schwefel
+
+![minima](/data/schwefel.png)
