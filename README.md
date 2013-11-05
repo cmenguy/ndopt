@@ -133,6 +133,8 @@ The following diagram takes the [Michalewicz](#michalewicz) function as an examp
 
 ![analysis](/data/particles.png)
 
+These observations make sense with the intuition, so it's important to use a reasonably high number of particles if we want to get closer to the global minima.
+
 ### Influence of the initial speed variation coefficient
 
 From the diagram below, we are testing different values of phi to see how quickly we converge towards the solution.
@@ -140,4 +142,9 @@ From the diagram below, we are testing different values of phi to see how quickl
 We can see that with too large values of phi, it takes a very long time to converge. In practice, a value of 4 is a good choice. In some cases, using large values can cause the algorithm to diverge because the particles will constantly overshoot the mean at every cycle.
 
 ![analysis](/data/phi.png)
-These observations make sense with the intuition, so it's important to use a reasonably high number of particles if we want to get closer to the global minima.
+
+### Influence of the mobility of the particles
+
+In the diagram below, we can clearly see that by setting K too small, the particles will be stuck in a local minima and unable to get out, while using a large value of K will fail to converge. It is important to take a good compromise between speed of convergence and accuracy.
+
+![analysis](/data/k.png)
