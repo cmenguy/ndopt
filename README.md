@@ -103,3 +103,7 @@ The De Jong 2 function is just another name for the [Rosenbrock](#rosenbrock) fu
 ### Schwefel
 
 ![minima](/data/schwefel.png)
+
+### Zakharov
+
+![minima](/data/zakharov.png)
