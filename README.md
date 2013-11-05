@@ -67,4 +67,12 @@ The results of the particle swarm algorithm will be described on each of the fun
 The [Rosenbrock](http://en.wikipedia.org/wiki/Rosenbrock_function) function is a non-convex function whose minima is found in a parabolic valley
 
 It is defined by:
+
 ![equation](http://latex.codecogs.com/gif.latex?(1-x\)^2+100(y-x^2\)^2)
+
+Applying particle swarm gives us the minima in (1, 1) like shown below:
+
+![minima](/data/rosenbrock.png)
+
+### Goldstein and Price
+
