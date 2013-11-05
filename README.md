@@ -16,7 +16,6 @@ continuous-optimizer applies the particle swarm algorithm to find the global min
     - [Schwefel](#schwefel)
     - [Zakharov](#zakharov)
     - [Easom](#easom)
-    - [Six Hump Camel Back](#six-hump-camel-back)
     - [Ackley Path](#ackley-path)
   - [Analysis](#analysis)
     - [Influence of the number of particles](#influence-of-the-number-of-particles)
@@ -111,3 +110,7 @@ The De Jong 2 function is just another name for the [Rosenbrock](#rosenbrock) fu
 ### Easom
 
 ![minima](/data/easom.png)
+
+### Ackley Path
+
+![minima](/data/ackley.png)
