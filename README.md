@@ -83,3 +83,15 @@ The Goldstein and Price function has a minima in (0, -1):
 ### Michalewicz
 
 ![minima](/data/michalewicz.png)
+
+### De Jong 1
+
+![minima](/data/dejong1.png)
+
+### De Jong 2
+
+The De Jong 2 function is just another name for the [Rosenbrock](#rosenbrock) function.
+
+### De Jong 3
+
+![minima](/data/dejong3.png)
