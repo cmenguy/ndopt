@@ -57,3 +57,14 @@ For a complete list of all parameters available, you can use the help menu:
                             verbose level
       -p PHI, --phi=PHI     initial speed variation coefficient
       -k K                  mobility of the particles
+
+## Results
+
+The results of the particle swarm algorithm will be described on each of the functions supported in the `functions.py` file. These functions have very different properties and topology, so it is a good indication to see how well the particle swarm algorithm performs.
+
+### Rosenbrock
+
+The [Rosenbrock](http://en.wikipedia.org/wiki/Rosenbrock_function) function is a non-convex function whose minima is found in a parabolic valley
+
+It is defined by:
+[equation](http://latex.codecogs.com/gif.latex?(1-x)^2+100(y-x^2)^2)
