@@ -76,10 +76,10 @@ Applying particle swarm gives us the minima in (1, 1) like shown below:
 
 ### Goldstein and Price
 
-The Goldstein and Price function is defined as:
-
-![equation](http://latex.codecogs.com/gif.latex?(1+(x+y+1\)^2(19-14x+3x^2-14y+6xy+3y^2\)\)(30+(2x-3y\)^2(18-32x+12x^2+48y-36xy+27y^2\))
-
-The minima is in (0, -1):
+The Goldstein and Price function has a minima in (0, -1):
 
 ![minima](/data/goldstein.png)
+
+### Michalewicz
+
+![minima](/data/michalewicz.png)
