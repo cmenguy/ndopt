@@ -1,6 +1,6 @@
-# continuous-optimizer &mdash; Optimization on n-dimensional functions
+# ndopt &mdash; Optimization on n-dimensional functions
 
-continuous-optimizer applies the particle swarm algorithm to find the global minima in a set of mathematical functions.
+ndopt applies the particle swarm algorithm to find the global minima in a set of mathematical functions.
 
 ## Quicklinks
 
@@ -24,7 +24,7 @@ continuous-optimizer applies the particle swarm algorithm to find the global min
 
 ## Installation
 
-continuous-optimizer uses `numpy` out of convenience to compute the mathematical operations (not sure if it's really necessary and maybe everything could be found in the `math` module, but `numpy` is so much more fun !)
+ndopt uses `numpy` out of convenience to compute the mathematical operations (not sure if it's really necessary and maybe everything could be found in the `math` module, but `numpy` is so much more fun !)
 
 It also uses `matplotlib` for the graphical representation of the functions in 3D, especially the `mplot3d` module.
 
