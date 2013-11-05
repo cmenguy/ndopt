@@ -22,3 +22,38 @@ continuous-optimizer applies the particle swarm algorithm to find the global min
     - [Influence of the number of particles](#influence-of-the-number-of-particles)
     - [Influence of the initial speed variation coefficient](#influence-of-the-initial-speed-variation-coefficient)
     - [Influence of the mobility of the particles](#influence-of-the-mobility-of-the-particles)
+
+## Installation
+
+continuous-optimizer uses `numpy` out of convenience to compute the mathematical operations (not sure if it's really necessary and maybe everything could be found in the `math` module, but `numpy` is so much more fun !)
+
+It also uses `matplotlib` for the graphical representation of the functions in 3D, especially the `mplot3d` module.
+
+There are several parameters that can be passed to the script:
+
+  - `dim` is the number of dimensions on which you want to run the optimization. Keep in mind that the higher the dimension, the harder the optimization problem.
+  - `function` is the name of a function to optimize. All supported function can be found in the `functions.py` file. The value passed must match the class name, and the case doesn't matter. For example, to run optimization on the Zakharov function, you can see that there is a class called `Zakharov` so you could pass in a string like `zakharov`.
+  - `num-particles` is the number of particles you want to use for your optimization. Defaults to 25.
+  - `iterations` is the maximum number of iterations after which the algorithm will stop if it has not converged. Avoid infinite loops.
+  - `verbose` is the verbose level which is a positive number more than or equal to 0. The higher the verbose, the more details you will see. At 0 there will be no details, 1 will display the initial and final functions, and 2 will display the functions at each iteration.
+  - `phi` is the initial speed variation coefficient.
+  - `K` is the mobility of the particles.
+
+For a complete list of all parameters available, you can use the help menu:
+
+    python particle_swarm -h
+    Usage: particle_swarm [options]
+
+    Options:
+      -h, --help            show this help message and exit
+      -d DIM, --dim=DIM     dimension of the function to optimize
+      -f FUNCTION, --function=FUNCTION
+                            name of the function to optimize
+      -n PARTICLES, --num-particles=PARTICLES
+                            number of particles in the swarm
+      -i ITERATIONS, --iterations=ITERATIONS
+                            max number of iterations
+      -v VERBOSE, --verbose=VERBOSE
+                            verbose level
+      -p PHI, --phi=PHI     initial speed variation coefficient
+      -k K                  mobility of the particles
